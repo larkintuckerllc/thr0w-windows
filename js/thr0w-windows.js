@@ -38,6 +38,7 @@
       throw 400;
     }
     var windows = [];
+    var scale = grid.getRowScale();
     var contentEl = grid.getContent();
     var sync = new window.thr0w.Sync(
       grid,
@@ -376,8 +377,8 @@
           return;
         }
         mousePanning = true;
-        lastX = e.pageX - offsetLeft;
-        lastY = e.pageY - offsetTop;
+        lastX = (e.pageX - offsetLeft) * scale;
+        lastY = (e.pageY - offsetTop) * scale;
         windowSync.update();
       }
       function handleMouseMove(e) {
@@ -386,8 +387,8 @@
         }
         var currentX;
         var currentY;
-        currentX = e.pageX - offsetLeft;
-        currentY = e.pageY - offsetTop;
+        currentX = (e.pageX - offsetLeft) * scale;
+        currentY = (e.pageY - offsetTop) * scale;
         x = Math.min(x + currentX - lastX, grid.getWidth() - width);
         x = Math.max(x, 0);
         y = Math.min(y + currentY - lastY, grid.getHeight() - height);
@@ -410,8 +411,8 @@
           return;
         }
         if (e.touches.length === 1) {
-          lastX = e.touches[0].pageX - offsetLeft;
-          lastY = e.touches[0].pageY - offsetTop;
+          lastX = (e.touches[0].pageX - offsetLeft) * scale;
+          lastY = (e.touches[0].pageY - offsetTop) * scale;
           windowSync.update();
         }
       }
@@ -421,8 +422,8 @@
         }
         var currentX;
         var currentY;
-        currentX = e.touches[0].pageX - offsetLeft;
-        currentY = e.touches[0].pageY - offsetTop;
+        currentX = (e.touches[0].pageX - offsetLeft) * scale;
+        currentY = (e.touches[0].pageY - offsetTop) * scale;
         x = Math.min(x + currentX - lastX, grid.getWidth() - width);
         x = Math.max(x, 0);
         y = Math.min(y + currentY - lastY, grid.getHeight() - height);
