@@ -1,4 +1,4 @@
-README v0.0.4 / 21 APRIL 2016
+README v0.0.5 / 22 APRIL 2016
 
 # Thr0w Windows Module
 
