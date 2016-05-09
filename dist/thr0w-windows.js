@@ -47,7 +47,6 @@
       receive
       );
     this.openWindow = openWindow;
-    this.focusWindow = focusWindow;
     this.closeWindow = closeWindow;
     this.closeAllWindows = closeAllWindows;
     this.addEventListener = addEventListener;
@@ -161,28 +160,6 @@
       }
       windows.push(new Window(id, x, y, width,
         height, src));
-      stackWindows();
-      sync.update();
-      sync.idle();
-    }
-    // jscs:disable
-    /**
-    * This method is used to focus windows.
-    * @method focusWindow
-    * @param id {String} The id.
-    */
-    // jscs:enable
-    function focusWindow(id) {
-      if (id === undefined || typeof id !== 'string') {
-        throw 400;
-      }
-      var i = windows.map(getWindowId).indexOf(id);
-      if (i === -1) {
-        throw 400;
-      }
-      var w = windows[i];
-      windows.splice(i, 1);
-      windows.push(w);
       stackWindows();
       sync.update();
       sync.idle();
