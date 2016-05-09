@@ -1,7 +1,7 @@
 {
   "name": "thr0w-windows",
   "description": "The Thr0w Project is about building digital signage. This package provides windows.",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "main": [
     "dist/thr0w-windows.css",
     "dist/thr0w-windows.min.js"
