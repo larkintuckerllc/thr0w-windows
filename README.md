@@ -1,5 +1,3 @@
-README v0.0.5 / 22 APRIL 2016
-
 # Thr0w Windows Module
 
 ## Introduction
@@ -24,6 +22,12 @@ environment:
 Download the latest version:
 
 <https://github.com/larkintuckerllc/thr0w-windows/releases>
+
+or using Bower
+
+```
+bower install thr0w-windows
+```
 
 To install this module:
 

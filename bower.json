@@ -1,15 +1,26 @@
 {
   "name": "thr0w-windows",
-  "version": "0.0.5",
-  "authors": [
-    "John Tucker <john@larkintuckerllc.com>"
-  ],
+  "description": "The Thr0w Project is about building digital signage. This package provides windows.",
+  "version": "0.0.6",
   "main": [
     "dist/thr0w-windows.css",
     "dist/thr0w-windows.min.js"
   ],
   "license": "GPL",
   "ignore": [],
+  "keywords": [
+    "digital",
+    "signage",
+    "windows"
+  ],
+  "authors": [
+    "John Tucker <john@larkintuckerllc.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larkintuckerllc/thr0w-windows.git"
+  },
   "dependencies": {
+    "thr0w-client": "^2.0.5"
   }
 }
